@@ -34,4 +34,19 @@ class JavaWebDemoApplicationTests {
         System.out.println(result);
     }
 
+    @Test
+    public void demoUpdate() {
+        Demo demo = new Demo(
+                7,
+                "测试000",
+                "测试000",
+                1,
+                "测试000",
+                "https://fastly.picsum.photos/id/515/200/300.jpg?hmac=vFZxSlHgQLs0ROgtBCrqBiYOVaKSOrWGCyHjQclmjh8",
+                null,
+                null);
+        Result result = demoController.update(demo);
+        System.out.println(result);
+    }
+
 }

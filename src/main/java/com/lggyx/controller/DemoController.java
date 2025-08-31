@@ -42,5 +42,4 @@ public class DemoController {
         log.info("修改{}",demo.getName());
         return demoService.update(demo) ? Result.success() : Result.error("修改失败");
     }
-
 }
