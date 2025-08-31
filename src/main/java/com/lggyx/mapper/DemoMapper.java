@@ -8,4 +8,6 @@ public interface DemoMapper {
     Demo selectById(String id);
 
     int add(Demo demo);
+
+    int update(Demo demo);
 }

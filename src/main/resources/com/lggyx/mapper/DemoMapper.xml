@@ -17,6 +17,16 @@
         insert into demo(name, description, category, content, image, create_time, update_time)
         values (#{name}, #{description}, #{category}, #{content}, #{image}, #{createTime}, #{updateTime})
     </insert>
+    <update id="update">
+        update demo
+        set name = #{name},
+            description = #{description},
+            category = #{category},
+            content = #{content},
+            image = #{image},
+            update_time = #{updateTime}
+        where id = #{id}
+    </update>
     <select id="selectById" resultType="com.lggyx.pojo.Demo">
         select *
         from demo

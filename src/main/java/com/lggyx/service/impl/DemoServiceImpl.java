@@ -24,4 +24,10 @@ public class DemoServiceImpl implements DemoService {
         return demoMapper.add(demo) > 0;
     }
 
+    @Override
+    public boolean update(Demo demo) {
+        demo.setUpdateTime(LocalDateTime.now());
+        return demoMapper.update(demo) > 0;
+    }
+
 }
