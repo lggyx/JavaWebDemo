@@ -50,7 +50,7 @@ class JavaWebDemoApplicationTests {
     }
     @Test
     public void demoDelete() {
-        Result result = demoController.delete("7");
+        Result result = demoController.delete(7);
         System.out.println(result);
     }
 

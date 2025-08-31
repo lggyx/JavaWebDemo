@@ -11,5 +11,5 @@ public interface DemoMapper {
 
     int update(Demo demo);
 
-    int delete(String id);
+    int delete(Integer id);
 }

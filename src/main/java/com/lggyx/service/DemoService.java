@@ -10,5 +10,7 @@ public interface DemoService {
 
     boolean update(Demo demo);
 
-    boolean delete(String id);
+    boolean delete(Integer id);
+
+    boolean deletes(Integer[] ids);
 }

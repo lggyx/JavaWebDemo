@@ -7,6 +7,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Arrays;
+
 /**
  * 这是一个样例，进行增删改查CRUD操作，同时还有分页查询
  */
@@ -46,8 +48,16 @@ public class DemoController {
      * 删除
      */
     @DeleteMapping("/delete/{id}")
-    public Result delete(@PathVariable String id){
+    public Result delete(@PathVariable Integer id){
         log.info("删除{}",id);
         return demoService.delete(id) ? Result.success() : Result.error("删除失败");
+    }
+    /**
+     * 批量删除
+     */
+    @DeleteMapping("/deletes/{ids}")
+    public Result deletes(@PathVariable Integer[] ids){
+        log.info("批量删除{}", Arrays.toString(ids));
+        return demoService.deletes(ids) ? Result.success() : Result.error("批量删除失败");
     }
 }

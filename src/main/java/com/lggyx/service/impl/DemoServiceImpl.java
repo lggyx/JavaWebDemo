@@ -31,8 +31,18 @@ public class DemoServiceImpl implements DemoService {
     }
 
     @Override
-    public boolean delete(String id) {
+    public boolean delete(Integer id) {
         return demoMapper.delete(id) > 0;
+    }
+
+    @Override
+    public boolean deletes(Integer[] ids) {
+        for(Integer id : ids){
+            if(demoMapper.delete(id) <= 0){
+                return false;
+            }
+        }
+        return true;
     }
 
 }
