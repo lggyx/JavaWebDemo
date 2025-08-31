@@ -9,4 +9,6 @@ public interface DemoService {
     boolean add(Demo demo);
 
     boolean update(Demo demo);
+
+    boolean delete(String id);
 }

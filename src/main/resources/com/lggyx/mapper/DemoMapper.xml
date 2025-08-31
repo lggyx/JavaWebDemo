@@ -19,14 +19,19 @@
     </insert>
     <update id="update">
         update demo
-        set name = #{name},
+        set name        = #{name},
             description = #{description},
-            category = #{category},
-            content = #{content},
-            image = #{image},
+            category    = #{category},
+            content     = #{content},
+            image       = #{image},
             update_time = #{updateTime}
         where id = #{id}
     </update>
+    <delete id="delete">
+        delete
+        from demo
+        where id = #{id}
+    </delete>
     <select id="selectById" resultType="com.lggyx.pojo.Demo">
         select *
         from demo

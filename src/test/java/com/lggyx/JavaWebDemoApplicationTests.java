@@ -48,5 +48,10 @@ class JavaWebDemoApplicationTests {
         Result result = demoController.update(demo);
         System.out.println(result);
     }
+    @Test
+    public void demoDelete() {
+        Result result = demoController.delete("7");
+        System.out.println(result);
+    }
 
 }

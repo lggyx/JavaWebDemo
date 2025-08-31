@@ -10,4 +10,6 @@ public interface DemoMapper {
     int add(Demo demo);
 
     int update(Demo demo);
+
+    int delete(String id);
 }

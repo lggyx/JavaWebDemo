@@ -30,4 +30,9 @@ public class DemoServiceImpl implements DemoService {
         return demoMapper.update(demo) > 0;
     }
 
+    @Override
+    public boolean delete(String id) {
+        return demoMapper.delete(id) > 0;
+    }
+
 }

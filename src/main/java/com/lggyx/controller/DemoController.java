@@ -42,4 +42,12 @@ public class DemoController {
         log.info("修改{}",demo.getName());
         return demoService.update(demo) ? Result.success() : Result.error("修改失败");
     }
+    /**
+     * 删除
+     */
+    @DeleteMapping("/delete/{id}")
+    public Result delete(@PathVariable String id){
+        log.info("删除{}",id);
+        return demoService.delete(id) ? Result.success() : Result.error("删除失败");
+    }
 }
