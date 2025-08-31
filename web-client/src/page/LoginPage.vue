@@ -3,15 +3,26 @@ import {defineComponent} from 'vue'
 import MenuCom from "../components/MenuCom.vue";
 
 export default defineComponent({
-name: "LoginPage",
+  name: "LoginPage",
   components: {MenuCom}
 })
 </script>
 
 <template>
-  <MenuCom/>
+  <h1 class="title center">这里是登录</h1>
+  <hr/>
+  <MenuCom class="center"/>
+  <hr/>
 </template>
 
 <style scoped>
+.center {
+  text-align: center;
+}
 
+.title {
+  margin: 20px 0;
+  color: #333;
+  font-size: 24px;
+}
 </style>
