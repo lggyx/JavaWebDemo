@@ -1,16 +1,11 @@
-<template>
-  <div id="dashBoard" >
-    <router-view></router-view>
-  </div>
-
-</template>
-
-<script>
-export default {
-  name: 'App'
-}
+<script setup lang="ts">
 </script>
 
-<style>
-@import "assets/css/reset.css";
+<template>
+  <div id="dashBoard">
+    <router-view></router-view>
+  </div>
+</template>
+
+<style scoped>
 </style>

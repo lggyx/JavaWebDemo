@@ -1,17 +1,15 @@
-<script>
-import MenuComponents from "@/components/MenuComponents.vue";
+<script lang="ts">
+import {defineComponent} from 'vue'
+import MenuCom from "../components/MenuCom.vue";
 
-export default {
-  name: 'LoginPage',
-  components: {MenuComponents}
-}
+export default defineComponent({
+name: "LoginPage",
+  components: {MenuCom}
+})
 </script>
 
 <template>
-  <div>
-    这里是登录页面
-    <MenuComponents/>
-  </div>
+  <MenuCom/>
 </template>
 
 <style scoped>

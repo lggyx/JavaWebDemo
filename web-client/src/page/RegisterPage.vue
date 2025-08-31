@@ -3,13 +3,13 @@ import {defineComponent} from 'vue'
 import MenuCom from "../components/MenuCom.vue";
 
 export default defineComponent({
-name: "HomePage",
+  name: "RegisterPage",
   components: {MenuCom}
 })
 </script>
 
 <template>
-  <MenuCom/>
+<MenuCom/>
 </template>
 
 <style scoped>
