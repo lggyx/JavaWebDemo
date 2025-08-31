@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import MenuCom from "../components/MenuCom.vue";
-import {ElButton, ElInput, ElTable, ElTableColumn} from 'element-plus'
-import {computed, ref} from 'vue'
+import { ElButton, ElInput, ElTable, ElTableColumn } from 'element-plus'
+import { computed, ref } from 'vue'
 
 interface User {
   date: string
@@ -11,11 +11,11 @@ interface User {
 
 const search = ref('')
 const filterTableData = computed(() =>
-    tableData.filter(
-        (data) =>
-            !search.value ||
-            data.name.toLowerCase().includes(search.value.toLowerCase())
-    )
+  tableData.filter(
+    (data) =>
+      !search.value ||
+      data.name.toLowerCase().includes(search.value.toLowerCase())
+  )
 )
 const handleEdit = (index: number, row: User) => {
   console.log(index, row)
@@ -50,25 +50,21 @@ const tableData: User[] = [
 
 <template>
   <h1 class="title center">这里是首页</h1>
-  <hr/>
-  <MenuCom class="center"/>
-  <hr/>
+  <hr />
+  <MenuCom class="center" />
+  <hr />
   <el-table :data="filterTableData" style="width: 100%">
-    <el-table-column label="Date" prop="date"/>
-    <el-table-column label="Name" prop="name"/>
+    <el-table-column label="Date" prop="date" />
+    <el-table-column label="Name" prop="name" />
     <el-table-column align="right">
       <template #header>
-        <el-input v-model="search" size="small" placeholder="Type to search"/>
+        <el-input v-model="search" size="small" placeholder="Type to search" />
       </template>
       <template #default="scope">
         <el-button size="small" type="primary" @click="handleEdit(scope.$index, scope.row)">
           Edit
         </el-button>
-        <el-button
-            size="small"
-            type="danger"
-            @click="handleDelete(scope.$index, scope.row)"
-        >
+        <el-button size="small" type="danger" @click="handleDelete(scope.$index, scope.row)">
           Delete
         </el-button>
       </template>

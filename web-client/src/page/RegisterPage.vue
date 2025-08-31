@@ -1,18 +1,18 @@
 <script lang="ts">
-import {defineComponent} from 'vue'
+import { defineComponent } from 'vue'
 import MenuCom from "../components/MenuCom.vue";
 
 export default defineComponent({
   name: "RegisterPage",
-  components: {MenuCom}
+  components: { MenuCom }
 })
 </script>
 
 <template>
   <h1 class="title center">这里是注册</h1>
-  <hr/>
-  <MenuCom class="center"/>
-  <hr/>
+  <hr />
+  <MenuCom class="center" />
+  <hr />
 </template>
 
 <style scoped>

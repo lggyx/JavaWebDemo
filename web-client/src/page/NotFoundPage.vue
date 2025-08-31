@@ -4,9 +4,9 @@ import MenuCom from "../components/MenuCom.vue";
 <template>
   <div>
     <h1 class="title center">页面不存在</h1>
-    <hr/>
-    <MenuCom class="center"/>
-    <hr/>
+    <hr />
+    <MenuCom class="center" />
+    <hr />
   </div>
 </template>
 <style scoped>
