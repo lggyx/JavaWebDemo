@@ -23,7 +23,9 @@ const handleEdit = (index: number, row: User) => {
 const handleDelete = (index: number, row: User) => {
   console.log(index, row)
 }
-
+const handleAdd = () => {
+  console.log('新增')
+}
 const tableData: User[] = [
   {
     date: '2016-05-03',
@@ -58,14 +60,17 @@ const tableData: User[] = [
     <el-table-column label="Name" prop="name" />
     <el-table-column align="right">
       <template #header>
+        <div style="display: flex; gap: 8px; justify-content: flex-end; align-items: center;">
         <el-input v-model="search" size="small" placeholder="Type to search" />
+        <el-button size="small" type="success" @click="handleAdd()"> 添加</el-button>
+        </div>
       </template>
       <template #default="scope">
         <el-button size="small" type="primary" @click="handleEdit(scope.$index, scope.row)">
-          Edit
+          编辑
         </el-button>
         <el-button size="small" type="danger" @click="handleDelete(scope.$index, scope.row)">
-          Delete
+          删除
         </el-button>
       </template>
     </el-table-column>
