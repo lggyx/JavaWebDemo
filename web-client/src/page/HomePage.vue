@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import MenuCom from "../components/MenuCom.vue";
-import { ElButton, ElInput, ElTable, ElTableColumn } from 'element-plus'
+import { ElButton, ElInput, ElTable, ElTableColumn,ElPagination } from 'element-plus'
 import { computed, ref } from 'vue'
 
 interface User {
@@ -75,6 +75,10 @@ const tableData: User[] = [
       </template>
     </el-table-column>
   </el-table>
+
+  <div id="elPagination">
+  <el-pagination  size="small" background layout="prev, pager, next" :total="50" />
+  </div>
 </template>
 
 <style scoped>
