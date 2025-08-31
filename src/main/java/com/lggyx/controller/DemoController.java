@@ -26,6 +26,7 @@ public class DemoController {
         Demo demo = demoService.selectById(id);
         return Result.success(demo);
     }
+    @PostMapping
     public Result add(@RequestBody Demo demo){
         log.info("添加{}",demo.getName());
         return demoService.add(demo) ? Result.success() : Result.error("添加失败");
