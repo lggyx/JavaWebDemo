@@ -5,10 +5,7 @@ import com.lggyx.pojo.Result;
 import com.lggyx.service.DemoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * 这是一个样例，进行增删改查CRUD操作，同时还有分页查询
@@ -28,6 +25,10 @@ public class DemoController {
         log.info("id:{}",id);
         Demo demo = demoService.selectById(id);
         return Result.success(demo);
+    }
+    public Result add(@RequestBody Demo demo){
+        log.info("添加{}",demo.getName());
+        return demoService.add(demo) ? Result.success() : Result.error("添加失败");
     }
 
 }

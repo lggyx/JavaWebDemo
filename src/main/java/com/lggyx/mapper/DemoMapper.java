@@ -6,4 +6,6 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface DemoMapper {
     Demo selectById(String id);
+
+    int add(Demo demo);
 }
