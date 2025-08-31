@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Arrays;
+import java.util.List;
 
 /**
  * 这是一个样例，进行增删改查CRUD操作，同时还有分页查询
@@ -53,11 +54,11 @@ public class DemoController {
         return demoService.delete(id) ? Result.success() : Result.error("删除失败");
     }
     /**
-     * 批量删除
+     * 批量删除，有两种方法，一种利用Java语言，一种利用MyBatis
      */
     @DeleteMapping("/deletes/{ids}")
-    public Result deletes(@PathVariable Integer[] ids){
-        log.info("批量删除{}", Arrays.toString(ids));
+    public Result deletes(@PathVariable List<Integer> ids){
+        log.info("批量删除{}", ids);
         return demoService.deletes(ids) ? Result.success() : Result.error("批量删除失败");
     }
 }

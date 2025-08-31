@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Service
 public class DemoServiceImpl implements DemoService {
@@ -36,13 +37,16 @@ public class DemoServiceImpl implements DemoService {
     }
 
     @Override
-    public boolean deletes(Integer[] ids) {
-        for(Integer id : ids){
+    public boolean deletes(List<Integer> ids) {
+        //方法一
+/*        for(Integer id : ids){
             if(demoMapper.delete(id) <= 0){
                 return false;
             }
         }
-        return true;
+        return true;*/
+        //方法二
+        return demoMapper.deletes(ids) > 0;
     }
 
 }

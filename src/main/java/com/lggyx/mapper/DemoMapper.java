@@ -3,6 +3,8 @@ package com.lggyx.mapper;
 import com.lggyx.pojo.Demo;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.util.List;
+
 @Mapper
 public interface DemoMapper {
     Demo selectById(String id);
@@ -12,4 +14,6 @@ public interface DemoMapper {
     int update(Demo demo);
 
     int delete(Integer id);
+
+    int deletes(List<Integer> ids);
 }

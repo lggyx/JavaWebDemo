@@ -32,6 +32,14 @@
         from demo
         where id = #{id}
     </delete>
+    <delete id="deletes">
+        delete
+        from demo
+        where id in
+        <foreach item="item" index="index" collection="list" open="(" separator="," close=")">
+            #{item}
+        </foreach>
+    </delete>
     <select id="selectById" resultType="com.lggyx.pojo.Demo">
         select *
         from demo

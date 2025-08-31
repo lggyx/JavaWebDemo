@@ -3,6 +3,8 @@ package com.lggyx.service;
 
 import com.lggyx.pojo.Demo;
 
+import java.util.List;
+
 public interface DemoService {
     Demo selectById(String id);
 
@@ -12,5 +14,5 @@ public interface DemoService {
 
     boolean delete(Integer id);
 
-    boolean deletes(Integer[] ids);
+    boolean deletes(List<Integer> ids);
 }
