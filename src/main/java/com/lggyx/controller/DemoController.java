@@ -26,10 +26,21 @@ public class DemoController {
         Demo demo = demoService.selectById(id);
         return Result.success(demo);
     }
-    @PostMapping
+    /**
+     * 添加
+     */
+    @PostMapping("/add")
     public Result add(@RequestBody Demo demo){
         log.info("添加{}",demo.getName());
         return demoService.add(demo) ? Result.success() : Result.error("添加失败");
+    }
+    /**
+     * 修改
+     */
+    @PostMapping("/update")
+    public Result update(@RequestBody Demo demo){
+        log.info("修改{}",demo.getName());
+        return demoService.update(demo) ? Result.success() : Result.error("修改失败");
     }
 
 }
