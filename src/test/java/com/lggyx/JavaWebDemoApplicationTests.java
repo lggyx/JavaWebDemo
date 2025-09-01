@@ -7,8 +7,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.util.List;
-
 @SpringBootTest
 class JavaWebDemoApplicationTests {
 
@@ -50,16 +48,10 @@ class JavaWebDemoApplicationTests {
         Result result = demoController.update(demo);
         System.out.println(result);
     }
+
     @Test
     public void demoDelete() {
         Result result = demoController.delete(7);
         System.out.println(result);
     }
-    @Test
-    public void demoDeletes() {
-        List<Integer> ids = List.of(1,2,3);
-        Result result = demoController.deletes(ids);
-        System.out.println(result);
-    }
-
 }
