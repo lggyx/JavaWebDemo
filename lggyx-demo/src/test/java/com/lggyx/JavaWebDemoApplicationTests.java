@@ -54,4 +54,5 @@ class JavaWebDemoApplicationTests {
         Result result = demoController.delete(7);
         System.out.println(result);
     }
+    
 }

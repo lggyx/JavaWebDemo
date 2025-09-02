@@ -1,11 +1,5 @@
-<script lang="ts">
-import {defineComponent} from 'vue'
+<script lang="ts" setup>
 import MenuCom from "../components/MenuCom.vue";
-
-export default defineComponent({
-  name: "LoginPage",
-  components: {MenuCom}
-})
 </script>
 
 <template>
@@ -13,9 +7,20 @@ export default defineComponent({
   <hr/>
   <MenuCom class="center"/>
   <hr/>
+  <div class="divCenter">
+    <el-card style="height: 40vh;width: 40vw">
+
+    </el-card>
+  </div>
 </template>
 
 <style scoped>
+.divCenter{
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .center {
   text-align: center;
 }
